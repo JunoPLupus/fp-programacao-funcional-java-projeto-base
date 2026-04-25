@@ -1,12 +1,20 @@
 package exercicios;
 
+import lombok.Getter;
+import lombok.Setter;
+
+import java.util.Objects;
+
 /**
  * Representa um aluno em uma instituição de ensino.
  * Classe baseada no exemplo do <a href="https://apexapps.oracle.com/pls/apex/f?p=44785:145:0::::P145_EVENT_ID,P145_PREV_PAGE:4887,143">exercicios.Curso JDK 8 MOOC: Lambdas and Streams Introduction</a>.
  *
  * @author Manoel Campos da Silva Filho
  */
+@Getter
+@Setter
 public class Estudante {
+
     private int id;
     private String nome;
     private char sexo;
@@ -42,62 +50,6 @@ public class Estudante {
         setAnoGraduacao(anoGraduacao);
         setCurso(curso);
         setCidade(cidade);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public final void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public final void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public char getSexo() {
-        return sexo;
-    }
-
-    public final void setSexo(char sexo) {
-        this.sexo = sexo;
-    }
-
-    public double getNota() {
-        return nota;
-    }
-
-    public final void setNota(double nota) {
-        this.nota = nota;
-    }
-
-    public int getAnoGraduacao() {
-        return anoGraduacao;
-    }
-
-    public final void setAnoGraduacao(int anoGraduacao) {
-        this.anoGraduacao = anoGraduacao;
-    }
-
-    public Curso getCurso() {
-        return curso;
-    }
-
-    public final void setCurso(Curso curso) {
-        this.curso = curso;
-    }
-
-    public Cidade getCidade() {
-        return cidade;
-    }
-
-    public void setCidade(Cidade cidade) {
-        this.cidade = cidade;
     }
 
     @Override
