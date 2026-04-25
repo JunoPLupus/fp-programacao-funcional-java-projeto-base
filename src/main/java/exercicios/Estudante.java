@@ -72,7 +72,15 @@ public class Estudante {
         return curso != null;
     }
 
+    public boolean isEqualCurso(Curso curso){
+        return hasCurso() && Objects.equals(this.curso.getNome(), curso.getNome());
+    }
+
     public boolean isAprovado(){
         return nota >= 6;
+    }
+
+    public boolean isEqualSexo(char sexo) {
+        return this.sexo == sexo;
     }
 }
